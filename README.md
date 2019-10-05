@@ -9,7 +9,7 @@ This is squaroventions demo project follow below instructions :-
 5. check npm version by running {{  npm -v }} in cmd
 6. check node version by running {{ node -v }} in cmd
 7. go to project directory on cmd ( use cd) {{ cd taskmanager }}
-8. run command {{ npm install @angular/cli@latest }}
+8. run command {{ npm install -g @angular/cli@latest }}
 9. run command {{ npm install }}
 10. run command {{ ng version }}
 11. to serve project / run project {{ ng serve --port 4400 }}
