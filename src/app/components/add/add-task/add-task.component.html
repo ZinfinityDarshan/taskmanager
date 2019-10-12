@@ -1,0 +1,28 @@
+<div style="display: flex; width: 100%; height: 100%; flex-direction: column;">
+    <h3 style="margin-left: 45%;">Add Task</h3>
+    <mat-card >
+        <form [formGroup]="taskForm" style="display: flex; flex-direction: column;">
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput placeholder="Placeholder" formControlName="title">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <input matInput placeholder="Placeholder" formControlName="decp">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Completion Time</mat-label>
+                <input matInput placeholder="Placeholder" formControlName="completiontime">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Assignee</mat-label>
+                <input matInput placeholder="Placeholder" formControlName="assignee">
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-stroked-button color="primary" (click)="addTask(taskForm.value)"> Add Task</button>
+                <button mat-raised-button color="warn" (click)="clearForm(taskForm)"> Reset</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+
+</div>
