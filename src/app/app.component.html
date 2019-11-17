@@ -1,14 +1,20 @@
-<div style="display: flex; flex-direction: column;">
 
-    <div>
+<div>
 
-        <mat-toolbar style="background-color: rgb(30, 86, 67); color: whitesmoke">
-            Squarovention <span style="color: red;">Task Manager</span></mat-toolbar>
+    <mat-toolbar style="background-color: rgb(30, 86, 67); color: whitesmoke; overflow: hidden;">
+        Squarovention <span style="color: red;">Task Manager</span>
+
+        <span class="example-spacer"></span>
+
+        <mat-chip-list>
+            <mat-chip selected color="warn" routerLink="/home">home</mat-chip>
+            &nbsp;&nbsp;
+            <mat-chip selected color="primary" routerLink="/user"><a >user</a></mat-chip>
+        </mat-chip-list>          
     
-    </div>
-    <div style="margin-top: 7%; display: flex; justify-content: center; height: 100%;">
-    
-        <add-task style="width: 50%;"></add-task>
-    
-    </div>
+    </mat-toolbar>
+
+</div>
+<div>
+    <router-outlet></router-outlet>
 </div>

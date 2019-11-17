@@ -1,15 +1,14 @@
-<p>
-    
-    home works!
+<div style="display: flex; flex-direction: row; justify-content: space-around;">
 
+    <div style="margin-top: 7%; display: flex; 
+    height: 100%; width: 100%;
+    flex-direction: column;">
+        <add-task style="width: 70%;"(tasksout)="addTasks($event)" ></add-task>
+        <!-- <br> -->
+    </div>
 
-    
-</p>
+    <div style="width: 100%; height: 100%;">
+        <view-tasks [tasksChild]="tasksParent"></view-tasks>
+    </div>
 
-<h2>
-        {{  title }}
-
-</h2>
-<div>
-    
 </div>

@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'
 })
-export class AddtaskService {
+export class TaskService {
 
   constructor(private db: AngularFirestore) { }
 
@@ -13,5 +13,9 @@ export class AddtaskService {
     this.db.collection('tasks').add(value).then(result =>{
       console.log(result);
     })
+  }
+
+  getTasks(){
+    return this.db.collection<Task>('tasks').valueChanges();
   }
 }

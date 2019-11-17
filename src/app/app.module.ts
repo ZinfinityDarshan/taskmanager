@@ -11,12 +11,17 @@ import { AngularFireModule  } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {environment} from '../environments/environment';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ViewTasksComponent } from './components/view/view-tasks/view-tasks.component';
+import { ViewUserComponent } from './components/view/view-user/view-user.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AddTaskComponent,
+    ViewTasksComponent,
+    ViewUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

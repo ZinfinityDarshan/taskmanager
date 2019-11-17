@@ -1,16 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewChecked } from '@angular/core';
+import { Task } from 'src/app/model/task';
+import { AddTaskComponent } from '../add/add-task/add-task.component';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewChecked {
 
-  constructor() { }
+  tasksParent: Task[] = [];
 
-  ngOnInit() {
+  message: string;
+  @ViewChild(AddTaskComponent, {read: false, static: false}) addtaskcomponent;
+  
+  addTasks(value: Task[]){
+    console.log('some taret event',value);
+    
+    this.tasksParent = value;
   }
 
-  title: string = "Hi Guys !!";
+  ngAfterViewChecked(){
+    console.log('ngAfterViewInit()')
+    this.message = this.addtaskcomponent.message;
+  }
 }

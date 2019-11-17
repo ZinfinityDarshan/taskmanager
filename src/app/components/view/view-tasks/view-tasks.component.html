@@ -1,0 +1,29 @@
+<h3 style="margin-left: 45%; align-items: center; float: left;" >Add Task</h3>
+<div style="display: flex; width: 60%; 
+    height: 100%; justify-content: center; flex-direction: row;
+    margin: 5px;" 
+    *ngFor="let task of tasksChild">
+    <mat-card style="border-left-color: red; display: flex; flex-direction: column; 
+    justify-content: start; align-items: stretch; margin: 5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px; width: 400px;">
+        <mat-card-content>
+            Title : &nbsp;<mat-chip color="primary" selected style="margin-bottom: 5px;">{{task.title}}</mat-chip>
+            <mat-divider></mat-divider>
+            <br><br>
+            Dscp : {{task.decp}}
+            <br>
+            <br>
+            <br>
+            Completion Time : <strong>{{task.completiontime}}</strong>
+            <br>
+            <br>
+            <mat-divider></mat-divider>
+            <br>
+            Assignee: <button mat-stroked-button color="primary">{{task.assignee}}</button>
+        </mat-card-content>
+
+    </mat-card>
+
+</div>
+
+<mat-chip-list></mat-chip-list>
